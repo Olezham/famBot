@@ -20,6 +20,11 @@ client.remove_command('help')
 
 async def on_ready():
     print( 'Здорова суки!Батя в здании' )
+
+@client.command(pass_contex = True)
+async def test (ctx):
+    b = int(input(''))
+    print (B)
     
     
  #roll
