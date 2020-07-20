@@ -21,7 +21,11 @@ async def on_ready():
     print( 'Здорова суки!Батя в здании' )
     
     
-    
+ #roll
+@client.command(pass_contex = True)
+async def roll( ctx ):
+    a = 10
+    await ctx.send(a)
     
 #kick
 @client.command(passs_contex = True)
