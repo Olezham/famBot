@@ -22,9 +22,9 @@ async def on_ready():
     print( 'Здорова суки!Батя в здании' )
 
 @client.command(pass_contex = True)
-async def test (ctx):
-    b = int(input(''))
-    print (B)
+async def test (ctx, message):
+    b = (''.format(message))
+    await ctx.send (b)
     
     
  #roll
