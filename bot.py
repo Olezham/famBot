@@ -1,5 +1,6 @@
 import discord
 import config
+import os
 from discord.ext import commands
 
 client =  commands.Bot(command_prefix = '/')
@@ -47,6 +48,6 @@ async def call(ctx, member: discord.Member):
     await member.send( f'{member.name}, ебаклак зайди в дискорд тебя ждёт -⚠{ctx.author.name}⚠' )
     
                        
-token = 'NzMzNDA1NzI2NDI4MzY0OTIx.XxCrlQ.c1GxsKl63pZ_NV93zRXV-kMYjb8'
 
+token = os.environ.get('BOT_TOKEN')
 client.run(token)
