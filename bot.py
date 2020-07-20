@@ -3,6 +3,7 @@ import os
 from discord.ext import commands
 
 client =  commands.Bot(command_prefix = '/')
+client.remove_command('help')
 
 #@client.event
 
@@ -37,9 +38,9 @@ async def call(ctx, member: discord.Member):
     await member.send( f'{member.name}, ебаклак зайди в дискорд тебя ждёт -⚠{ctx.author.name}⚠' )
     
 @client.command(pass_contex = True)
-async def commands(ctx):
-    emb = discord.Embed(Title = 'Комманды сервера', colour = discord.Color.green())
-    emb.add_field(name = '{}kick'.format( PREFIX ), value= 'Кикнуть пользователя с сервера')
+async def help(ctx):
+    emb = discord.Embed( title = 'Комманды сервера', colour = discord.Color.green() )
+    emb.add_field(name = 'kick', value= 'Кикнуть пользователя с сервера')
     await ctx.send( embed = emb )
     
                        
