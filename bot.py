@@ -18,12 +18,6 @@ client =  commands.Bot(command_prefix = '/')
 
 async def on_ready():
     print( 'Здорова суки!Батя в здании' )
-
-@client.command(pass_context = True)
-
-
-
-
     
     
     
