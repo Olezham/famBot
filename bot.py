@@ -28,9 +28,10 @@ async def on_ready():
 @commands.has_permissions( administrator = True )
 async def kick(ctx, member: discord.Member, *,reason = None):
     await ctx.channel.purge (limit = 1)
-    await member.send(f'{member.name}, Вот тебе приглос обратно: https://discord.gg/5QQXr9J ')
+    await member.send(f'{member.name}, Долбаёб😱, тебя кикнули с сервера хз почему.Лутше не выёбуйся😉,а то и ☠БАН☠ скоро получишь')
+    await member.send('Вот тебе приглос обратно😤: https://discord.gg/5QQXr9J')
     await member.kick(reason = reason)
-    await ctx.send('{member.name} has been kicked⚠️')
+    await ctx.send(f'{member.name} has been kicked⚠️')
     
 
 
