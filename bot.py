@@ -21,13 +21,13 @@ client.remove_command('help')
 async def on_ready():
     print( 'Здорова суки!Батя в здании' )
 
-@client.command(pass_contex = True)
-async def test ( ctx ):
-    await ctx.send('Write message')
-    @client.event
-    async def on_message(message, ctx):
-        msg = message.content.lower
-        ctx.send('Your write' + msg  +'!')
+#@client.command(pass_contex = True)
+#async def test ( ctx ):
+   # await ctx.send('Write message')
+    #@client.event
+    #async def on_message(message, ctx):
+       # msg = message.content.lower
+       # ctx.send('Your write' + msg  +'!')
     
     
     
