@@ -21,17 +21,13 @@ async def on_ready():
 
 @client.command(pass_context = True)
 
-async def info( ctx ):
-    await ctx.send('!ban @Mortalz#2081')
 
-@client.command(pass_context = True)
-async def admin( ctx ):
-    channel = client.get_channel( 733395632353706118 )
+
+
     
     
     
-    await ctx.send( f'Создатель:Пашок' )
-    await ctx.send( f'Модеры:Олежан и Никита' )
+    
 #kick
 @client.command(passs_contex = True)
 @commands.has_permissions( administrator = True )
@@ -47,7 +43,7 @@ async def call(ctx, member: discord.Member):
     await member.send( f'{member.name}, ебаклак зайди в дискорд тебя ждёт -⚠{ctx.author.name}⚠' )
     
 @client.command(pass_contex = True)
-async def help(ctx):
+async def commands(ctx):
     emb = discord.Embed(Title = 'Комманды сервера', colour = discord.Color.purpule())
     emb.add_field(name = '{}kick'.format( PREFIX ), value= 'Кикнуть пользователя с сервера')
     await ctx.send( embed = emb )
