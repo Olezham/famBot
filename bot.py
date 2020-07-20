@@ -46,6 +46,12 @@ async def kick(ctx, member: discord.Member, *,reason = None):
 async def call(ctx, member: discord.Member):
     await member.send( f'{member.name}, ебаклак зайди в дискорд тебя ждёт -⚠{ctx.author.name}⚠' )
     
+@client.command()
+async def help(ctx):
+    emb = discord.Embed(Title = 'Комманды сервера', colour = discord.Color.purpule())
+    emb.add_field(name = '{}kick'.format( PREFIX ), value= 'Кикнуть пользователя с сервера')
+    await ctx.send( embed = emb )
+    
                        
 
 token = os.environ.get('BOT_TOKEN')
