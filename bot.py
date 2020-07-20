@@ -30,7 +30,7 @@ async def kick(ctx, member: discord.Member, *,reason = None):
     await ctx.channel.purge (limit = 1)
     await member.kick(reason = reason)
     await ctx.send('{ member.name } has been kicked⚠️')
-    await member.send(f'{ member.mention }, Вот тебе приглос обратно: https://discord.gg/5QQXr9J ')
+    await member.send(f'{member.mention}, Вот тебе приглос обратно: https://discord.gg/5QQXr9J ')
 
 
 @client.command()
