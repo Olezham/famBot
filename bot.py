@@ -23,7 +23,7 @@ async def on_ready():
 
 @client.command(pass_contex = True)
 async def test ( ctx ):
-    ctx.send('Write message')
+    await ctx.send('Write message')
     @client.event
     async def on_message(message, ctx):
         msg = message.content.lower
