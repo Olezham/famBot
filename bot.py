@@ -1,5 +1,6 @@
 import discord
 import os
+import random
 from discord.ext import commands
 
 client =  commands.Bot(command_prefix = '/')
@@ -24,7 +25,7 @@ async def on_ready():
  #roll
 @client.command(pass_contex = True)
 async def roll( ctx ):
-    a = 10
+    a = random.randint(1,100)
     await ctx.send(a)
     
 #kick
