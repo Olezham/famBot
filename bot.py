@@ -38,7 +38,7 @@ async def call(ctx, member: discord.Member):
     
 @client.command(pass_contex = True)
 async def commands(ctx):
-    emb = discord.Embed(Title = 'Комманды сервера', colour = discord.Color.purpule())
+    emb = discord.Embed(Title = 'Комманды сервера', colour = discord.Color.pink())
     emb.add_field(name = '{}kick'.format( PREFIX ), value= 'Кикнуть пользователя с сервера')
     await ctx.send( embed = emb )
     
