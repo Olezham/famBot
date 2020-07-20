@@ -50,4 +50,4 @@ async def call(ctx, member: discord.Member):
                        
 
 token = os.environ.get('BOT_TOKEN')
-client.run(token)
+bot.run(str(token))
