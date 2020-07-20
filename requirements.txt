@@ -1,4 +1,1 @@
 discord.py
-aoihttp
-websockets
-chardet
