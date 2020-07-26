@@ -1,6 +1,8 @@
 import discord
 import os
 import random
+import requests
+from bs4 import BeautifulSoup
 from discord.ext import commands
 
 client =  commands.Bot(command_prefix = '/')
@@ -62,6 +64,41 @@ async def help(ctx):
     emb.add_field(name = f'call', value= 'Позвать пользователя в дискорд')
     emb.add_field(name = f'kick', value= 'Кикнуть пользователя с сервера')
     await ctx.send( embed = emb )
+    
+URL = 'https://news.google.com/covid19/map?hl=ru&gl=RU&ceid=RU:ru'
+
+def get_html(url, params=None):
+    r = requests.get(url,params=params)
+    return r
+
+
+def parse():
+    html = get_html(URL)
+    if html.status_code ==200:
+        get_content(html.text)
+    else:
+        print('Что-то пошло по пизде')
+
+
+
+def get_content(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    items = soup.find_all(class_='tZjT9b')
+
+
+    
+    for item in items:
+        a = (item.find('div', class_= 'UvMayb').get_text())
+    print (str(a))
+
+@client.command(pass_contex = True)
+async def covid(ctx):
+    ctx.send(str(a))
+
+    
+parse()
+
+
     
                        
 
