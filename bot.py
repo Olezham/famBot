@@ -86,10 +86,10 @@ def get_content(html):
     items = soup.find_all(class_='tZjT9b')
 
 
- for item in items:
+    for item in items():
     
    
-    a = (item.find('div', class_= 'UvMayb').get_text())
+        a = (item.find('div', class_= 'UvMayb').get_text())
     
 
 @client.command(pass_contex = True)
