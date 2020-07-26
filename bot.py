@@ -87,13 +87,13 @@ def get_content(html):
 
 
     
-    for item in items:
-        a = (item.find('div', class_= 'UvMayb').get_text())
-    print (str(a))
+   
+a = (item.find('div', class_= 'UvMayb').get_text())
+    
 
 @client.command(pass_contex = True)
 async def covid(ctx):
-    ctx.send(str(a))
+    ctx.send(a)
 
     
 parse()
