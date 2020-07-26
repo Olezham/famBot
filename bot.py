@@ -94,10 +94,10 @@ def get_content(html):
 
 @client.command(pass_contex = True)
 async def covid(ctx):
-    ctx.send(a)
+    
 
     
-parse()
+
 
 
     
