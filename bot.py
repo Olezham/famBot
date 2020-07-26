@@ -84,24 +84,8 @@ def parse():
 def get_content(html):
     soup = BeautifulSoup(html, 'html.parser')
     items = soup.find_all(class_='tZjT9b')
-
-
     for item in items():
-    
-   
         a = (item.find('div', class_= 'UvMayb').get_text())
     
-
-@client.command(pass_contex = True)
-async def covid(ctx):
-    
-
-    
-
-
-
-    
-                       
-
 token = os.environ.get('BOT_TOKEN')
 client.run(str(token))
