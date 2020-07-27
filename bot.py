@@ -63,6 +63,7 @@ async def help(ctx):
     await ctx.channel.purge (limit = 1)
     emb.add_field(name = f'call', value= 'Позвать пользователя в дискорд')
     emb.add_field(name = f'kick', value= 'Кикнуть пользователя с сервера')
+    emb.add_field(name = f'roll', value= 'Кинуть кубик')
     await ctx.send( embed = emb )
     
 
