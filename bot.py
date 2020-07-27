@@ -65,27 +65,7 @@ async def help(ctx):
     emb.add_field(name = f'kick', value= 'Кикнуть пользователя с сервера')
     await ctx.send( embed = emb )
     
-URL = 'https://news.google.com/covid19/map?hl=ru&gl=RU&ceid=RU:ru'
 
-def get_html(url, params=None):
-    r = requests.get(url,params=params)
-    return r
-
-@client.command(pass_contex = True)
-async def parse(ctx):
-    html = get_html(URL)
-    if html.status_code ==200:
-        get_content(html.text)
-    else:
-        print('Что-то пошло по пизде')
-
-
-
-def get_content(html):
-    soup = BeautifulSoup(html, 'html.parser')
-    items = soup.find_all(class_='tZjT9b')
-    for item in items():
-        a = (item.find('div', class_= 'UvMayb').get_text())
     
 token = os.environ.get('BOT_TOKEN')
 client.run(str(token))
