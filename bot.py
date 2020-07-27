@@ -71,8 +71,8 @@ def get_html(url, params=None):
     r = requests.get(url,params=params)
     return r
 
-
-def parse():
+@client.command(pass_contex = True)
+asyc def parse():
     html = get_html(URL)
     if html.status_code ==200:
         get_content(html.text)
