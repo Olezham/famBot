@@ -72,7 +72,7 @@ def get_html(url, params=None):
     return r
 
 @client.command(pass_contex = True)
-async def parse():
+async def parse(ctx):
     html = get_html(URL)
     if html.status_code ==200:
         get_content(html.text)
