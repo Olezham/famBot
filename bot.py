@@ -21,7 +21,7 @@ client.remove_command('help')
 
 async def on_ready():
     print( 'Здорова суки!Батя в здании' )
-    await client.change_presence( status = discord.Status.online, activity = discord.Game('Трясёт сиськами'))
+    await client.change_presence( status = discord.Status.online, activity = discord.ActivityType.watching('на сиськи'))
 #@client.command(pass_contex = True)
 #async def test ( ctx ):
    # await ctx.send('Write message')
