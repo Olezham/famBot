@@ -39,7 +39,11 @@ async def on_ready():
 async def roll( ctx ):
     a = random.randint(1,100)
     await ctx.send(a)
-    
+
+@client.command(pass_contex = True)
+@commands.has_permissions( administrator = True )
+async def mute(ctx, member: discord.Member, *,reason = None):
+    await member.mute(reason = reason)
 #kick
 @client.command(passs_contex = True)
 @commands.has_permissions( administrator = True )
