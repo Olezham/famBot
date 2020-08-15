@@ -31,9 +31,9 @@ async def on_ready():
        # msg = message.content.lower
        # ctx.send('Your write' + msg  +'!')
 #press F
-@client.command(pass_contex = True)
-async def f(ctx):
-    await client_add.reaction(ctx.massage, '✡️')
+#@client.command(pass_contex = True)
+#async def f(ctx):
+    #await client_add.reaction(ctx.massage, '✡️')
     
     
     
@@ -46,6 +46,7 @@ async def roll( ctx ):
     await ctx.send(a)
 
 @client.command(pass_contex = True)
+@commands.has_permissions( administrator = True )
 async def mute(ctx, member: discord.Member, *,reason = None):
     await member.mute(reason = reason)
 #kick
