@@ -46,7 +46,6 @@ async def roll( ctx ):
     await ctx.send(a)
 
 @client.command(pass_contex = True)
-@commands.has_permissions( administrator = True )
 async def mute(ctx, member: discord.Member, *,reason = None):
     await member.mute(reason = reason)
 #kick
