@@ -30,7 +30,7 @@ async def on_ready():
        # msg = message.content.lower
        # ctx.send('Your write' + msg  +'!')
 #press F
-@client.commnd(pass_contex = True)
+@client.command(pass_contex = True)
 async def f(ctx):
     await ctx.send('{ctx.author.name} отдал уважение')
     await Bot_add.reaction(ctx.massage, ' :regional_indicator_f: ')
