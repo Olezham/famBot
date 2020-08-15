@@ -33,7 +33,7 @@ async def on_ready():
 #press F
 @client.command(pass_contex = True)
 async def f(ctx):
-    await add.reaction(ctx.massage, '✡️')
+    await client_add.reaction(ctx.massage, '✡️')
     
     
     
