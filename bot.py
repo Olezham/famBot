@@ -3,6 +3,7 @@ import os
 import random
 from bs4 import BeautifulSoup
 from discord.ext import commands
+from discord.ext.commands import Bot
 
 client =  commands.Bot(command_prefix = '/')
 client.remove_command('help')
@@ -32,7 +33,7 @@ async def on_ready():
 #press F
 @client.command(pass_contex = True)
 async def f(ctx):
-    await ctx.send('{ctx.author.name} отдал уважение')
+    await ctx.send(' {author.name}  отдал уважение')
     await Bot_add.reaction(ctx.massage, ' :regional_indicator_f: ')
     
     
