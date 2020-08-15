@@ -33,8 +33,7 @@ async def on_ready():
 #press F
 @client.command(pass_contex = True)
 async def f(ctx):
-    await ctx.send(' {author.name}  отдал уважение')
-    await add.reaction(ctx.massage, ' :regional_indicator_f: ')
+    await add.reaction(ctx.massage, '✡️')
     
     
     
