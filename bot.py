@@ -31,9 +31,9 @@ async def on_ready():
        # msg = message.content.lower
        # ctx.send('Your write' + msg  +'!')
 #press F
-#@client.command(pass_contex = True)
-#async def f(ctx):
-    #await client_add.reaction(ctx.massage, '✡️')
+@client.command(pass_contex = True)
+async def f(ctx):
+    await ctx.add_reaction(ctx.massage, ':regional_indicator_f: ')
     
     
     
