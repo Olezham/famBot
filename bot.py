@@ -42,7 +42,7 @@ async def f(ctx):
  #roll
 @client.command(pass_contex = True)
 async def roll( ctx ):
-    a = random.randint(44,100)
+    a = random.randint(1,100)
     await ctx.send(a)
 
 @client.command(pass_contex = True)
