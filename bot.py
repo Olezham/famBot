@@ -23,6 +23,7 @@ client.remove_command('help')
 async def on_ready():
     print( 'Здорова суки!Батя в здании' )
     await client.change_presence( status = discord.Status.online, activity = discord.Game('Потряси сиськами'))
+    await ctx.send('Bot successful conected')
 
     
     
