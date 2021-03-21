@@ -29,6 +29,7 @@ async def on_ready():
 #repite words
 @client.command(pass_contex = True)
 async def f(ctx, arg):
+    await ctx.channel.purge (limit = 1)
     await ctx.send(arg)
     
     
