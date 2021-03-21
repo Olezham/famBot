@@ -36,6 +36,12 @@ async def f(ctx):
     await ctx.add_reaction(ctx.massage, ':regional_indicator_f: ')
     
     
+#repite words
+@client.command(pass_contex = True)
+async def f(ctx, arg):
+    await ctx.send(arg)
+    
+    
     
     
     
