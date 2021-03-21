@@ -23,17 +23,7 @@ client.remove_command('help')
 async def on_ready():
     print( 'Здорова суки!Батя в здании' )
     await client.change_presence( status = discord.Status.online, activity = discord.Game('Потряси сиськами'))
-#@client.command(pass_contex = True)
-#async def test ( ctx ):
-   # await ctx.send('Write message')
-    #@client.event
-    #async def on_message(message, ctx):
-       # msg = message.content.lower
-       # ctx.send('Your write' + msg  +'!')
-#press F
-@client.command(pass_contex = True)
-async def f(ctx):
-    await ctx.add_reaction(ctx.massage, ':regional_indicator_f: ')
+
     
     
 #repite words
@@ -50,11 +40,12 @@ async def f(ctx, arg):
 async def roll( ctx ):
     a = random.randint(1,100)
     await ctx.send(a)
-
+#mute
 @client.command(pass_contex = True)
 @commands.has_permissions( administrator = True )
 async def mute(ctx, member: discord.Member, *,reason = None):
     await member.mute(reason = reason)
+    
 #kick
 @client.command(passs_contex = True)
 @commands.has_permissions( administrator = True )
