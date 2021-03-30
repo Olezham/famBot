@@ -21,7 +21,7 @@ tits = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOiSaoxewzJaWrkIb
     #await channel.send(embed = discord.Embed(description = f'Взлом очка хас бин окей'))
     
 @client.command(pass_contex = True)
-async def tits
+async def tits(ctx):
     rtits = random.choice(tits)
     await ctx send(rtits)
 
