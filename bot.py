@@ -15,7 +15,7 @@ client.remove_command('help')
 
     #role = discord.utils.get( member.guild.roles, id = 733395826893651968)
     
-   # await member.add_roles( role )
+   #await member.add_roles( role )
     #await channel.send(embed = discord.Embed(description = f'Взлом очка хас бин окей'))
 
 @client.event
@@ -25,17 +25,7 @@ async def on_ready():
     await client.change_presence( status = discord.Status.online, activity = discord.Game('Потряси сиськами'))
     await ctx.send('Bot successful conected')
     
-class Slapper(commands.Converter):
-    async def convert(self, ctx, argument):
-        to_slap = random.choice(ctx.guild.members)
-        return '{0.author} slapped {1} because *{2}*'.format(ctx, to_slap, argument)
-
-@bot.command()
-async def slap(ctx, *, reason: Slapper):
-    await ctx.send(reason)
-
-    
-    
+     
 #repite words
 @client.command(pass_contex = True)
 async def f(ctx, arg):
@@ -43,14 +33,12 @@ async def f(ctx, arg):
     await ctx.send(arg)
     
     
-    
-    
-    
  #roll
 @client.command(pass_contex = True)
 async def roll( ctx ):
     a = random.randint(1,100)
     await ctx.send(a)
+    
 #mute
 @client.command(pass_contex = True)
 @commands.has_permissions( administrator = True )
