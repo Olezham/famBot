@@ -8,6 +8,8 @@ from discord.ext.commands import Bot
 client =  commands.Bot(command_prefix = '/')
 client.remove_command('help')
 
+
+tits = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOiSaoxewzJaWrkIbjSaU3I8v3Kph8z10v2w&usqp=CAU','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIVCe5MJcYfTDBBn98K-Q600fkSE5_hYPo-A&usqp=CAU','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbAJvlEQ0WvuQiP0WmQEH0xJA2ACfRlSCtnQ&usqp=CAU','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNxoL7RLyq1SK_hx-YEnROS--8xknavMSH3Gjd9Jo6Kb3kIibSoKXVjL8plKQiCWzSsy0&usqp=CAU']
 #@client.event
 
 #async def on_member_join( member ):
@@ -17,6 +19,11 @@ client.remove_command('help')
     
    #await member.add_roles( role )
     #await channel.send(embed = discord.Embed(description = f'Взлом очка хас бин окей'))
+    
+@client.command(pass_contex = True)
+async def tits
+    rtits = random.choice(tits)
+    await ctx send(rtits)
 
 @client.event
 
