@@ -25,7 +25,13 @@ async def on_ready():
     print( 'Здорова суки!Батя в здании' )
     await client.change_presence( status = discord.Status.online, activity = discord.Game('Потряси сиськами'))
     await ctx.send('Bot successful conected')
-    
+
+@client.command()
+async def ping(ctx):
+    for guild in client.guilds: # guild stands for server
+        for channel in guild.channels:
+            if isinstance(channel, discord.TextChannel): # Check if channel is a text channel
+                await channel.send("hi")  
      
 #repite words
 @client.command(pass_contex = True)
