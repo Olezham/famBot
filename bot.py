@@ -9,22 +9,15 @@ client =  commands.Bot(command_prefix = '/')
 client.remove_command('help')
 
 
-tits = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOiSaoxewzJaWrkIbjSaU3I8v3Kph8z10v2w&usqp=CAU','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIVCe5MJcYfTDBBn98K-Q600fkSE5_hYPo-A&usqp=CAU','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbAJvlEQ0WvuQiP0WmQEH0xJA2ACfRlSCtnQ&usqp=CAU','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNxoL7RLyq1SK_hx-YEnROS--8xknavMSH3Gjd9Jo6Kb3kIibSoKXVjL8plKQiCWzSsy0&usqp=CAU']
-#@client.event
 
-#async def on_member_join( member ):
-    #channel = client.get_channel( 733395632353706118 )
 
-    #role = discord.utils.get( member.guild.roles, id = 733395826893651968)
-    
-   #await member.add_roles( role )
-    #await channel.send(embed = discord.Embed(description = f'Взлом очка хас бин окей'))
+
 
 @client.event
 async def on_ready():
     print( 'Здорова суки!Батя в здании' )
     await client.change_presence( status = discord.Status.online, activity = discord.Game('Потряси сиськами'))
-    await ctx.send('Bot successful conected')
+    
 
 @client.command()
 async def ping(ctx):
@@ -32,15 +25,10 @@ async def ping(ctx):
         for channel in guild.channels:
             if isinstance(channel, discord.TextChannel): # Check if channel is a text channel
                 await channel.send("hi")  
-     
-#repite words
-@client.command(pass_contex = True)
-async def f(ctx, arg):
-    await ctx.channel.purge (limit = 1)
-    await ctx.send(arg)
+
     
     
- #roll
+#roll
 @client.command(pass_contex = True)
 async def roll( ctx ):
     a = random.randint(1,100)
