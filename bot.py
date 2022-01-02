@@ -63,7 +63,7 @@ async def help(ctx):
     emb.add_field(name = f'call', value  'Позвать пользователя в дискорд')
     emb.add_field(name = f'kick', value = 'Кикнуть пользователя с сервера')
     emb.add_field(name = f'roll', value = 'Кинуть кубик')
-    emb.add_field(name = f'mute', value  'Замутить пользователя')
+    emb.add_field(name = f'mute', value = 'Замутить пользователя')
     await ctx.send( embed = emb )
     
 
