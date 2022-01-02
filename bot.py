@@ -51,7 +51,7 @@ async def kick(ctx, member: discord.Member, *,reason = None):
     await ctx.send(f'{member.name} has been kicked⚠️')
     
 
-
+#call
 @client.command()
 async def call(ctx, member: discord.Member):
     await member.send( f'{member.name}, ебаклак зайди в дискорд тебя ждёт -⚠{ctx.author.name}⚠' )
@@ -60,9 +60,10 @@ async def call(ctx, member: discord.Member):
 async def help(ctx):
     emb = discord.Embed( title = 'Комманды сервера', colour = discord.Color.green() )
     await ctx.channel.purge (limit = 1)
-    emb.add_field(name = f'call', value= 'Позвать пользователя в дискорд')
-    emb.add_field(name = f'kick', value= 'Кикнуть пользователя с сервера')
-    emb.add_field(name = f'roll', value= 'Кинуть кубик')
+    emb.add_field(name = f'call', value  'Позвать пользователя в дискорд')
+    emb.add_field(name = f'kick', value = 'Кикнуть пользователя с сервера')
+    emb.add_field(name = f'roll', value = 'Кинуть кубик')
+    emb.add_field(name = f'mute', value  'Замутить пользователя')
     await ctx.send( embed = emb )
     
 
