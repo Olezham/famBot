@@ -113,7 +113,7 @@ async def on_reaction_add(reaction, user):
             if str(reaction.emoji) == '✅':
                 await ctx.channel.purge(limit=1)
                 await last_message.delete()
-                await asyncio.sleep(20)
+                await asyncio.sleep(2*60*60)
                 await advert2(last_message.channel)
             elif str(reaction.emoji) == '🧿':
                 await advert3(ctx, user)  # Передаем объект пользователя
