@@ -1,11 +1,13 @@
 import discord
 import random
+import os
 
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
 
-intents = discord.Intents.default()
+intents = discord.Intents.default()
+
 client = Bot(command_prefix=".", intents=intents)
 client.remove_command('help')
 
@@ -158,6 +160,6 @@ async def help(ctx):
     #emb.add_field(name = f'**mute**', value = 'Замутить пользователя')
     await ctx.send( embed = emb )
 
+key = os.getenv('API')
 
-
-client.run("NzMzNDA1NzI2NDI4MzY0OTIx.GI2P32.GNI9-ctJ-gzCO_oweZE7SSaAxBh1QPYgGYCN_U")
+client.run(key)
