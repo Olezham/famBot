@@ -5,8 +5,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
 
-intents = discord.Intents.default()
-intents.message_content = True
+intents = discord.Intents.default()
 client = Bot(command_prefix=".", intents=intents)
 client.remove_command('help')
 
