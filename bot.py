@@ -123,25 +123,8 @@ async def on_reaction_add(reaction, user):
 async def roll( ctx ):
     a = random.randint(1,100)
     await ctx.send(a)
-    
-#mute
-'''
-@client.command(pass_contex = True)
-@commands.has_permissions( administrator = True )
-async def mute(ctx, member: discord.Member, *,reason = None):
-    await member.mute(reason = reason)
-'''    
-#kick
-'''
-@client.command(passs_contex = True)
-@commands.has_permissions( administrator = True )
-async def kick(ctx, member: discord.Member, *,reason = None):
-    await ctx.channel.purge (limit = 1)
-    await member.send(f'{member.name}, Долбаёб😱, тебя кикнули с сервера хз почему.Лучше не выёбуйся😉,а то и ☠БАН☠ скоро получишь')
-    await member.send('Вот тебе приглос обратно😤: https://discord.gg/5QQXr9J')
-    await member.kick(reason = reason)
-    await ctx.send(f'{member.name} has been kicked⚠️')
-''' 
+   
+
 
 #call
 @client.command()
